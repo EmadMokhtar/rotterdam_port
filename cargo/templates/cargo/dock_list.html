@@ -1,0 +1,34 @@
+{% extends "cargo/_base.html" %}
+{% load staticfiles %}
+{% block container %}
+<h1>Rotterdam Docks</h1>
+{% if docks %}
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Dock No.</th>
+            <th>Ship No.</th>
+            <th>Fire Hazard</th>
+            <th>Chemical Hazard</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for dock in docks %}
+        <tr>
+            <td><a href="{{ dock.get_absulote_url }}">
+                {{ dock.dock_number }}
+            </a>
+        </td>
+        <td>{% if dock.ship_in %}{{ dock.ship_in }}{% else %}Dock is empty{% endif %}</td>
+        {% if dock.ship_in %}<td>{% if dock.ship_in.has_fire_hazard  %}Yes{% else %}No{% endif %}</td>
+        <td>{% if dock.ship_in.has_chemical_hazard  %}Yes{% else %}No{% endif %}</td>
+        {% endif %}
+    </tr>
+
+    {% endfor %}
+</tbody>
+</table>
+{% else %}
+<p class="lead">"No Dock to display"</p>
+{% endif %}
+{% endblock %}
