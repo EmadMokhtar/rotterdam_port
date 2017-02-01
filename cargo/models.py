@@ -1,7 +1,7 @@
 # from django.contrib.auth.models import User
+from django.core.exceptions import ValidationError
 from django.db import models, transaction
 from django.utils.translation import ugettext_lazy as _
-from django.core.exceptions import ValidationError
 
 
 class Ship(models.Model):

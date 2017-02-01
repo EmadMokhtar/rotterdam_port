@@ -1,6 +1,7 @@
-from django.test import TestCase
 from django.core.exceptions import ValidationError
-from cargo.models import Dock, Ship, Container, DockLog, IN_ACTION, OUT_ACTION
+from django.test import TestCase
+
+from cargo.models import IN_ACTION, OUT_ACTION, Container, Dock, DockLog, Ship
 
 
 class DockTestCases(TestCase):

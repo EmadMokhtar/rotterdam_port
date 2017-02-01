@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Container, Dock, Ship, DockLog
+from .models import Container, Dock, DockLog, Ship
 
 
 class DockAdmin(admin.ModelAdmin):
