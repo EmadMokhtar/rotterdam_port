@@ -10,6 +10,7 @@
 `python manage.py runserver`
 5. Import demo data `python manage.py loaddata demo_data.json`
 6. Browse to `http://127.0.0.1:8000/cargo/docks`
+
 ## Run tests
 * To run full suite
 ``` bash
