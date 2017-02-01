@@ -81,6 +81,7 @@ class Dock(models.Model):
         return self._create_log(ship=ship,
                                 action=OUT_ACTION)
 
+
 IN_ACTION = 'in'
 OUT_ACTION = 'out'
 LOG_ACTIONS_CHOICES = (
