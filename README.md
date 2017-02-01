@@ -12,6 +12,7 @@
 ## Run tests
 * To run full suite
 ``` bash
+pip install -r requirements_dev.txt
 python runtests.py
 ```
 * To run Django tests
