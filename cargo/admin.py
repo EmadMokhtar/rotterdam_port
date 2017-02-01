@@ -8,7 +8,7 @@ class DockAdmin(admin.ModelAdmin):
 
 
 class ContainerAdmin(admin.ModelAdmin):
-    list_display = ('ship', 'has_fire', 'has_chemical')
+    list_display = ('__str__', 'ship', 'has_fire', 'has_chemical')
 
 
 class ShipAdmin(admin.ModelAdmin):
